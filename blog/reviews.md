@@ -1,7 +1,6 @@
 ---
 layout: page
 title: "Reviews"
-description: "공개 가능한 논문 리뷰를 시간순으로 모읍니다."
 permalink: /reviews/
 ---
 
