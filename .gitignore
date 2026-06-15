@@ -1,0 +1,32 @@
+.DS_Store
+
+# Raw papers stay local. Publish reviews, not PDFs.
+inbox/
+read/
+inbox/*.pdf
+read/*.pdf
+
+# Jekyll output and local Ruby dependencies.
+_site/
+blog/_site/
+blog/.jekyll-cache/
+blog/.sass-cache/
+.bundle/
+blog/.bundle/
+blog/vendor/
+vendor/
+node_modules/
+test-results/
+playwright-report/
+blob-report/
+
+# Local environment files.
+.env
+.env.*
+
+# Local agent and workspace instructions stay private.
+.agents/
+.claude/
+AGENT.md
+AGENTS.md
+CLAUDE.md

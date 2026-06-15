@@ -1,0 +1,35 @@
+---
+layout: default
+title: "Home"
+---
+
+<article class="first-entry home-info">
+  <header class="entry-header">
+    <h1>AI 엔지니어 논문 리뷰</h1>
+  </header>
+  <section class="entry-content">
+    <p>AI 엔지니어가 되기 위해 읽는 논문을 기록합니다. 단순 요약보다 구현 판단, 평가 관점, 실패 모드에 집중합니다.</p>
+  </section>
+  <footer class="entry-footer">
+    txdwls'log paper reviews.
+  </footer>
+</article>
+
+{% for post in site.posts limit:10 %}
+  <article class="post-entry">
+    <header class="entry-header">
+      <h2>{{ post.title }}</h2>
+    </header>
+    <section class="entry-content">
+      <p>{{ post.excerpt | strip_html | truncate: 420 }}</p>
+    </section>
+    <footer class="entry-footer">
+      날짜: {{ post.date | date: "%Y-%m-%d" }} | 읽는 시간: {{ post.reading_time }} | 분류: {{ post.category }}
+    </footer>
+    <a class="entry-link" aria-label="post link to {{ post.title }}" href="{{ post.url | relative_url }}"></a>
+  </article>
+{% endfor %}
+
+<nav class="pagination" aria-label="블로그 탐색">
+  <a class="next" href="{{ '/reading-path/' | relative_url }}">읽기 경로 »</a>
+</nav>
