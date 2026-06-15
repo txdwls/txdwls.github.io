@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Reading Path"
-description: "AI 엔지니어링 논문을 읽는 순서와 각 wave의 목표입니다."
+title: "읽는 순서"
+description: "어떤 순서로 읽으면 좋은지, 단계마다 무엇을 보는지 정리했습니다."
 permalink: /reading-path/
 ---
 
