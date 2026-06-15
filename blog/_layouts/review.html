@@ -6,23 +6,43 @@ layout: default
   <header class="review-header">
     <a class="back-link" href="{{ '/' | relative_url }}">← 리뷰 목록</a>
     <h1>{{ page.paper }}</h1>
-    <dl class="meta-grid">
-      {% if page.year %}<div><dt>연도</dt><dd>{{ page.year }}</dd></div>{% endif %}
-      {% if page.category %}<div><dt>분류</dt><dd>{{ page.category }}</dd></div>{% endif %}
-      {% if page.status %}<div><dt>상태</dt><dd>{{ page.status }}</dd></div>{% endif %}
-    </dl>
-    {% if page.tags and page.tags.size > 0 %}
-      <ul class="post-tags" aria-label="Tags">
-        {% for tag in page.tags %}
-          <li>{{ tag }}</li>
-        {% endfor %}
-      </ul>
-    {% endif %}
     {% if page.paper_url or page.code_url %}
-      <p class="paper-link">
-        {% if page.paper_url %}<a href="{{ page.paper_url }}" rel="noopener noreferrer" target="_blank">논문 원문</a>{% endif %}
-        {% if page.code_url %}{% if page.paper_url %} · {% endif %}<a href="{{ page.code_url }}" rel="noopener noreferrer" target="_blank">코드</a>{% endif %}
-      </p>
+      {% assign has_resource_links = true %}
+    {% endif %}
+    {% if page.tags and page.tags.size > 0 or has_resource_links %}
+      <div class="review-header-bar">
+        {% if page.tags and page.tags.size > 0 %}
+          <ul class="post-tags" aria-label="Tags">
+            {% for tag in page.tags %}
+              <li>{{ tag }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+        {% if has_resource_links %}
+          <nav class="review-actions" aria-label="논문 자료">
+            {% if page.paper_url %}
+              <a class="resource-link" href="{{ page.paper_url }}" rel="noopener noreferrer" target="_blank">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 3.8h7.2L19 8.6V20a1.2 1.2 0 0 1-1.2 1.2H7A1.2 1.2 0 0 1 5.8 20V5A1.2 1.2 0 0 1 7 3.8Z"/>
+                  <path d="M14 3.8V9h5"/>
+                  <path d="M9 13h6M9 16h6"/>
+                </svg>
+                <span>논문 원문</span>
+              </a>
+            {% endif %}
+            {% if page.code_url %}
+              <a class="resource-link" href="{{ page.code_url }}" rel="noopener noreferrer" target="_blank">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m9 8-4 4 4 4"/>
+                  <path d="m15 8 4 4-4 4"/>
+                  <path d="m13 5-2 14"/>
+                </svg>
+                <span>코드</span>
+              </a>
+            {% endif %}
+          </nav>
+        {% endif %}
+      </div>
     {% endif %}
   </header>
   <div class="prose">
