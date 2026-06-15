@@ -1,5 +1,5 @@
 title: "txdwls'log"
-description: "AI/ML 논문을 읽으면서 정리하는 기록"
+description: "논문 읽고 적어두는 노트"
 lang: "ko-KR"
 timezone: "Asia/Seoul"
 url: "https://txdwls.github.io"
@@ -7,7 +7,7 @@ baseurl: ""
 
 author:
   name: "Sungjin"
-  bio: "AI/ML 논문 읽기 노트. 구현 판단과 실패 모드를 씁니다."
+  bio: "논문 읽고 적어둡니다."
 
 permalink: /reviews/:title/
 

@@ -1,13 +1,13 @@
 ---
-title: "{공개 리뷰 제목}"
-paper: "{논문 원제}"
+title: "{논문 원제 그대로}"
+paper: "{논문 원제 그대로}"
 year: 2024
 category: "Transformer"
-reading_time: "15 min"
 status: "초안"
 featured: false
 tags: ["transformer", "attention"]
 paper_url: "https://arxiv.org/abs/0000.00000"
+code_url: ""
 math: false
 ---
 

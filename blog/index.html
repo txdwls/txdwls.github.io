@@ -8,7 +8,7 @@ title: "Home"
     <h1>AI/ML 논문 읽기 노트</h1>
   </header>
   <section class="entry-content">
-    <p>논문을 읽으면서 정리하는 기록입니다. 요약보다 구현 판단, 평가 설계, 실패 모드를 씁니다.</p>
+    <p>논문 읽고 적어두는 노트.</p>
   </section>
   <footer class="entry-footer">
     txdwls'log paper notes.
@@ -24,7 +24,7 @@ title: "Home"
       <p>{{ post.excerpt | strip_html | truncate: 420 }}</p>
     </section>
     <footer class="entry-footer">
-      날짜: {{ post.date | date: "%Y-%m-%d" }} | 읽는 시간: {{ post.reading_time }} | 분류: {{ post.category }}
+      날짜: {{ post.date | date: "%Y-%m-%d" }} | 분류: {{ post.category }}
     </footer>
     <a class="entry-link" aria-label="post link to {{ post.title }}" href="{{ post.url | relative_url }}"></a>
   </article>
