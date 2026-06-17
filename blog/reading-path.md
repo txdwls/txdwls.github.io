@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "읽는 순서"
-description: "어떤 순서로 읽으면 좋은지, 단계마다 무엇을 보는지 정리했습니다."
+title: "LLM·Vision 관심 논문"
+description: "LLM과 Vision을 공부하면서 보고 싶은 논문과 주제를 모아둔 목록입니다."
 permalink: /reading-path/
 ---
 
@@ -68,3 +68,23 @@ permalink: /reading-path/
 - LLaVA
 
 핵심 질문: text-only LLM 지식을 vision-language system으로 확장할 때 어떤 평가가 필요한가.
+
+## Object Detection {#object-detection}
+
+- R-CNN / Fast R-CNN / Faster R-CNN
+- YOLO
+- SSD
+- DETR
+- RT-DETR
+
+핵심 질문: region proposal, one-stage detector, transformer detector는 속도와 정확도, 학습 안정성에서 어떻게 갈라지는가.
+
+## Segmentation {#segmentation}
+
+- Fully Convolutional Networks
+- U-Net
+- DeepLab
+- Mask R-CNN
+- Segment Anything
+
+핵심 질문: semantic segmentation, instance segmentation, promptable segmentation은 어떤 문제 설정과 데이터 요구사항을 갖는가.

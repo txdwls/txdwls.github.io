@@ -14,6 +14,8 @@ permalink: /concepts/
   <a href="{{ '/reading-path/#serving' | relative_url }}">Model Serving</a>
   <a href="{{ '/reading-path/#serving' | relative_url }}">Quantization</a>
   <a href="{{ '/reading-path/#multimodal' | relative_url }}">Multimodal Learning</a>
+  <a href="{{ '/reading-path/#object-detection' | relative_url }}">Object Detection</a>
+  <a href="{{ '/reading-path/#segmentation' | relative_url }}">Segmentation</a>
 </div>
 
 개념 글은 논문 리뷰가 쌓인 뒤, 같은 개념을 여러 논문이 다르게 다루는 지점을 정리할 때 추가합니다.

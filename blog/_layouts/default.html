@@ -21,19 +21,22 @@
   </head>
   <body class="list">
     <header class="header">
-      <nav class="nav">
-        <div class="logo">
-          <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <nav class="nav" aria-label="Primary">
+        <div class="nav-brand">
+          <div class="logo">
+            <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+          </div>
+          <button id="theme-toggle" type="button" title="Toggle theme" aria-label="Toggle theme">
+            <svg id="moon" class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><circle class="moon-body" cx="11" cy="12" r="8"/><circle class="moon-cutout" cx="16.2" cy="9.8" r="8"/></svg>
+            <svg id="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <span class="nav-separator" aria-hidden="true">|</span>
         </div>
         <ul id="menu">
-          <li><a href="{{ '/about/' | relative_url }}">소개</a></li>
-          <li><a href="{{ '/concepts/' | relative_url }}">개념</a></li>
-          <li><a href="{{ '/reading-path/' | relative_url }}">읽는 순서</a></li>
+          <li><a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Posts</a></li>
+          <li><a href="{{ '/concepts/' | relative_url }}"{% if page.url == '/concepts/' %} aria-current="page"{% endif %}>Concepts</a></li>
+          <li><a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a></li>
         </ul>
-        <button id="theme-toggle" type="button" title="Toggle theme" aria-label="Toggle theme">
-          <svg id="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 14.2A8.7 8.7 0 0 1 9.8 3a7 7 0 1 0 11.2 11.2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <svg id="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        </button>
       </nav>
     </header>
     <main class="main">
